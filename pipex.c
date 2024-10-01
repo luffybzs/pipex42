@@ -6,7 +6,7 @@
 /*   By: ayarab <ayarab@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 14:34:29 by ayarab            #+#    #+#             */
-/*   Updated: 2024/10/01 18:58:41 by ayarab           ###   ########.fr       */
+/*   Updated: 2024/10/01 19:12:21 by ayarab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,9 +97,13 @@ int ft_verif_access(char **path, t_data *data)
 	while (path[i])
 	{
 		tmp = ft_strjoin_free(path[i], "/");
+		if (!tmp)
+			return(0);
 		tmp = ft_strjoin_free(tmp, data->av[1]);
-		printf("%s\n", tmp);
+		if (!tmp)
+			return(0);
 		verif = access(tmp, F_OK);
+		printf("%d\n", verif);
 		if (verif == 0)
 			return (i);
 		i++;
@@ -116,7 +120,6 @@ int	main(int ac, char **av, char **env)
 	fill_data(&data,av, env);
 	path = ft_search_path(&data);
 	goodbin = ft_verif_access(path,&data);
-	printf("%d\n", goodbin);
 	// if (goodbin != -1)
 	// {
 	// 	execve(path, av[1], path[goodbin]);
