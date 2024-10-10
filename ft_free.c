@@ -6,15 +6,15 @@
 /*   By: ayarab <ayarab@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 17:55:47 by ayarab            #+#    #+#             */
-/*   Updated: 2024/10/01 18:57:29 by ayarab           ###   ########.fr       */
+/*   Updated: 2024/10/07 18:29:43 by ayarab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include "pipex.h"
+#include "pipex.h"
 
- void	ft_free_char(char **res)
- {
-	int i;
+void	ft_free_char(char **res)
+{
+	int	i;
 
 	i = 0;
 	while (res[i])
@@ -23,8 +23,9 @@
 		i++;
 	}
 	free(res);
- }
- char	*ft_strjoin_free(char *s1, char *s2)
+}
+
+char	*ft_strjoin_free(char *s1, char *s2)
 {
 	char	*str;
 	size_t	i;
@@ -52,5 +53,3 @@
 	free(s1);
 	return (str);
 }
- 
- 

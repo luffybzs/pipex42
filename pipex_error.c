@@ -6,7 +6,7 @@
 /*   By: ayarab <ayarab@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 13:43:00 by ayarab            #+#    #+#             */
-/*   Updated: 2024/10/02 19:00:31 by ayarab           ###   ########.fr       */
+/*   Updated: 2024/10/03 16:23:47 by ayarab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void ft_error_verif(char *badcmd)
 {
+
 	ft_putstr_fd(badcmd, 2);
 	ft_putstr_fd(": command not found\n", 2);
 }
