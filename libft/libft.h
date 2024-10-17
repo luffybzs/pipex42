@@ -6,7 +6,7 @@
 /*   By: ayarab <ayarab@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 13:55:40 by ayarab            #+#    #+#             */
-/*   Updated: 2024/06/04 12:42:16 by ayarab           ###   ########.fr       */
+/*   Updated: 2024/10/17 15:39:41 by ayarab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,5 +84,7 @@ void	ft_putstr_fd(char *str, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 void	ft_putendl_fd(char *s, int fd);
+
+int		ft_strcmp(char *s1, char *s2);
 
 #endif

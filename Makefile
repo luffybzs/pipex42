@@ -6,11 +6,13 @@
 #    By: ayarab <ayarab@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/30 14:37:00 by ayarab            #+#    #+#              #
-#    Updated: 2024/10/07 17:38:28 by ayarab           ###   ########.fr        #
+#    Updated: 2024/10/15 22:10:54 by ayarab           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS =	pipex.c ft_free.c pipex_error.c ft_exec_cmd.c \
+		get_next_line.c get_next_line_utils.c  \
+		ft_parsing_pipex.c \
 		 
 					
 LIBFT_DIR       = libft/

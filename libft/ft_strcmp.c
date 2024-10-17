@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex_error.c                                      :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayarab <ayarab@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/02 13:43:00 by ayarab            #+#    #+#             */
-/*   Updated: 2024/10/17 15:54:39 by ayarab           ###   ########.fr       */
+/*   Created: 2024/10/17 15:36:41 by ayarab            #+#    #+#             */
+/*   Updated: 2024/10/17 15:54:52 by ayarab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#include "libft.h"
 
-void	ft_error_verif(char *badcmd)
+int	ft_strcmp(char *s1, char *s2)
 {
-	ft_putstr_fd(badcmd, 2);
-	ft_putstr_fd(": command not found\n", 2);
-}
+	int	i;
 
-void	ft_error_file(char *s1)
-{
-	ft_putstr_fd(s1, 2);
-	ft_putstr_fd(": No such file or directory\n", 2);
-}
-
-void	ft_error_open(t_data *data)
-{
-	ft_putstr_fd(data->av[data->ac - 1], 2);
-	ft_putstr_fd(": Permission denied\n", 2);
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+		i++;
+	return (s1[i] - s2[i]);
 }

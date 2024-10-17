@@ -6,7 +6,7 @@
 /*   By: ayarab <ayarab@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 10:01:23 by ayarab            #+#    #+#             */
-/*   Updated: 2024/10/01 18:09:59 by ayarab           ###   ########.fr       */
+/*   Updated: 2024/10/17 15:54:45 by ayarab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,6 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 		i++;
 	}
 	substr[i] = '\0';
-	free((char*)str);
+	free((char *)str);
 	return (substr);
 }
